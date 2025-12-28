@@ -272,6 +272,7 @@ def fact_check(query, documents, model, analyzer_time=None):
 
     You must respond with a JSON object matching this structure:
     {{
+        "claim": "The textual claim subject to verification",
         "label": "Supported" or "Refuted" or "Not Enough Information",
         "language": "language code",
         "date": "YYYY-MM-DD",
@@ -280,18 +281,8 @@ def fact_check(query, documents, model, analyzer_time=None):
         "reasoning": "your complete reasoning here"
     }}
 
-    Label Definitions:
-    - Supported: The claim is accurate and supported by evidence. Use this when the claim is True or Mostly True (largely accurate with only minor inaccuracies that don't change the fundamental meaning).
-    - Refuted: The claim is inaccurate and contradicted by evidence. Use this when the claim is False or Mostly False (contains some truth but the overall statement is misleading or incorrect).
-    - Not Enough Information: Insufficient evidence to make a determination, or the claim is Half True (partially accurate but missing critical context that makes it neither clearly supported nor refuted).
-
-    Guidelines:
-    - If the claim's core assertion is correct despite minor details being wrong, choose "Supported"
-    - If the claim's core assertion is incorrect despite some minor details being right, choose "Refuted"
-    - Only use "Not Enough Information" when evidence is truly insufficient or the claim is equally true and false
-
-    IMPORTANT: Return ONLY the JSON data, not the schema definition.
-    Do not include any text before or after the JSON object.
+    Respond with only the above JSON format without adding any extra
+    content.
     """
     prompt = PromptTemplate.from_template(template)
     formatted_prompt = prompt.format(context=documents, claim=query)
