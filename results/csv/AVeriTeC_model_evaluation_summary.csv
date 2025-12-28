@@ -1,0 +1,16 @@
+model,result,accuracy,macro_precision,macro_recall,macro_f1
+llama3,result1,0.735,0.549,0.52,0.524
+llama3,result2,0.725,0.537,0.502,0.505
+llama3,result3,0.724,0.498,0.493,0.49
+mistral,result1,0.662,0.566,0.508,0.508
+mistral,result2,0.672,0.578,0.531,0.525
+mistral,result3,0.663,0.562,0.509,0.506
+gemma2,result1,0.744,0.595,0.549,0.566
+gemma2,result2,0.724,0.575,0.524,0.542
+gemma2,result3,0.751,0.608,0.558,0.576
+phi4,result1,0.708,0.581,0.545,0.551
+phi4,result2,0.709,0.578,0.551,0.553
+phi4,result3,0.714,0.586,0.547,0.554
+deepseek-r1:8b,result1,0.633,0.479,0.449,0.458
+deepseek-r1:8b,result2,0.64,0.498,0.464,0.473
+deepseek-r1:8b,result3,0.646,0.5,0.471,0.478

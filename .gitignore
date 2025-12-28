@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# 環境變數
+.env
+.venv
+env/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 敏感資訊
+APIKey.json
+config.json
+*.key
+*.secret
+
+# 日誌
+*.log
+
+# 暫存檔
+*.tmp
+*.bak
+*_backup/
+backup_*/
+
+# 向量資料庫
+*-db/
+*.db
+
+# 大型中間檔案
+*_complete.json
+*_rerun.json
+*_missing_claims*.json
+*_content.json
+*_content_filtered.json
+
+# 系統檔
+.DS_Store
+Thumbs.db
